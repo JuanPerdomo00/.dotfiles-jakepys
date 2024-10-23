@@ -1,0 +1,10 @@
+[user]
+	name = Juan Perdomo [Jakepy]
+	email = perdomojuan187@gmail.com
+[core]
+	editor = nvim
+	autocrlf = input
+[init]
+	defaultBranch = main
+[alias]
+	lg = log --graph --oneline --pretty=format:'%h <%an> %s %Cgreen%d'
