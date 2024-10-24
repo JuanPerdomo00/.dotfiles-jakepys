@@ -117,6 +117,11 @@ FZF_ALT_C_COMMAND= source <(fzf --zsh)
 # Go Bin
 #export GOPATH=$HOME/go
 
+if [ -f ~/.banner_zsh ]; then
+	source ~/.banner_zsh
+
+fi
+
 # config alias and function
 if [ -f ~/.alias_zsh ]; then
     source ~/.alias_zsh
