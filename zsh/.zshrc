@@ -111,6 +111,9 @@ fi
 # fzf
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
+# PATH
+export PATH="$PATH:/home/Jakepys/.local/bin"
+
 #alias k=kubectl
 #compdef __start_kubectl k
 #. "/home/Jakepys/.deno/env"
