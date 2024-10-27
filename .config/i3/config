@@ -34,6 +34,19 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+#
+# Aplicaciones al inicio
+#
+# Script que detecta el monitor 
+exec ~/.config/scripts_jakepys/monitors/toggle_screens.sh
+exec_always picom
+# Me deja siempre por defecto este fondo de pantalla
+exec_always ~/.fehbg
+exec_always --no-startup-id nitrogen --restore
+
+
+
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -49,7 +62,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec "notify-send 'Run Kitty Jakepys'; kitty"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -58,7 +71,7 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#005577' -sf '#EEEEEE' -fn 'monospace-10'"
 #bindsym $mod+d rofi -show run 
 bindsym $mod+d exec rofi -show drun -show-icons -b
-
+bindsym $mod+c exec rofi -show run -show-icons -b
 # A more modern dmenu replacement is rofi:
 #bindcode $mod+d exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -117,8 +130,7 @@ bindsym $mod+a focus parent
 
 
 assign [class="firefox"] $ws1
-#assign [class="Emacs"] $ws3
-#assign [class="TelegramDesktop"] $ws5
+
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -164,8 +176,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+mod1+l exec dm-tool lock
-
+# suspend
+bindsym $mod+Shift+p exec --no-startup-id systemctl suspend && i3lock -c 181818
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -219,7 +231,6 @@ client.background       #FFFFFF
 # finds out, if available)
 bar {
   position top
-  #i3bar_command i3bar -t
   status_command i3blocks
   height 30
   colors {
@@ -238,7 +249,3 @@ bar {
 # border
 client.focused #3B2C4F #5A3F76 #A66CB2 #D3B4E1
 
-# picom
-exec picom -b -f
-# Me deja siempre por defecto este fondo de pantalla
-exec feh --bg-scale /home/Jakepys/.config/wallpaper/rainbowbaytes.png
