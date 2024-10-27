@@ -1,0 +1,12 @@
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+//@theme "/usr/share/rofi/themes/windows11-list-dark.rasi"
+//@theme "/usr/share/rofi/themes/rounded-purple-dark.rasi"
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "hack 10";
+ combi-modi: "window,drun,ssh";
+ }
+
+
+@theme "/usr/share/rofi/themes/rounded-purple-dark.rasi"
