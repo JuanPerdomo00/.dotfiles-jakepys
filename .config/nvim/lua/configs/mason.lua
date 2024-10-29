@@ -4,6 +4,7 @@ return {
 		"stylua",
 		"rust-analyzer",
 		"pyright",
+		"gopls",
 		"clangd",
 		"prettier",
 		"rustfmt",
