@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 lspconfig.pyright.setup({}) -- python server
 lspconfig.lua_ls.setup({}) -- lua server
-lspconfig.rust_analyzer.setup({}) -- rust server
+-- lspconfig.rust_analyzer.setup({}) -- rust server
 lspconfig.ts_ls.setup({}) -- typescript server
 lspconfig.jdtls.setup({}) -- java server
 lspconfig.bashls.setup({}) -- bash server
