@@ -112,7 +112,7 @@ fi
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 # PATH
-export PATH="$PATH:/home/Jakepys/.local/bin:/home/Jakepys/.cargo/bin"
+export PATH="$PATH:/home/Jakepys/.local/bin:/usr/local/go/bin"
 
 #alias k=kubectl
 #compdef __start_kubectl k
