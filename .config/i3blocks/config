@@ -1,0 +1,99 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar
+separator_block_width=15
+markup=none
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+[volume]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/volume
+label=♪ 
+interval=once
+signal=10
+
+
+# Memory usage
+[memory]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/memory
+label= 
+interval=30
+
+# Disk usage
+[disk]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/disk
+label=HOME 
+interval=30
+
+# Battery indicator
+[battery-poly]
+label=
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/battery2
+markup=pango
+interval=30
+
+# Date Time
+[time]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/time
+interval=1
+#TZ_FILE=~/.tz
+STRFTIME_FORMAT=%Y-%m-%d %H:%M
+
+# CPU usage
+[cpu_usage2]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/cpu
+markup=pango
+interval=persist
+min_width=CPU 100.00%
+REFRESH_TIME=1
+WARN_PERCENT=50
+CRIT_PERCENT=80
+DECIMALS=2
+
+# Docker status
+[docker]
+command=/home/Jakepys/.config/i3blocks/scriptsi3bar/docker
+color=#0db7ed
+interval=10
+label=🐳 
+
+# IP Address
+[ip]
+command=hostname -I | awk '{ print $1 }'
+interval=once
+color=#9ffff
+
+# User info
+[user]
+label= : 
+command=lslogins | grep $USER | awk '{print $5,$NF}'
+interval=once
+color=#FFD700
