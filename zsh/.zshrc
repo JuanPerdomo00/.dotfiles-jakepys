@@ -139,3 +139,12 @@ fi
 if [ -f ~/.starship_zsh ]; then
 	source ~/.starship_zsh
 fi
+
+# bun completions
+[ -s "/home/Jakepys/.bun/_bun" ] && source "/home/Jakepys/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+# zig
+export PATH="$HOME/.zigchad/version/0.14.0-dev:$PATH"
