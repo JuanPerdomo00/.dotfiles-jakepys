@@ -8,5 +8,5 @@ if xrandr | grep "HDMI-1 connected"; then
     ~/.screenlayout/hdmi-1.sh
 else
     # Si mi portatil esta abierto
-    xrandr --output eDP-1 --auto --primary --output HDMI-1 --off
+    ~/.screenlayout/portatil.sh
 fi
