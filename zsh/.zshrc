@@ -147,4 +147,4 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # zig
-export PATH="$HOME/.zigchad/version/0.14.0-dev:$PATH"
+export PATH="$HOME/.zigchad/version/0.13.0:$PATH"
