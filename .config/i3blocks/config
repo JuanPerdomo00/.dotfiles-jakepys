@@ -65,7 +65,7 @@ interval=30
 command=/home/Jakepys/.config/i3blocks/scriptsi3bar/time
 interval=1
 #TZ_FILE=~/.tz
-STRFTIME_FORMAT=%Y-%m-%d %H:%M
+STRFTIME_FORMAT=%d-%m-%Y %I:%M:%S %p
 
 # CPU usage
 [cpu_usage2]
