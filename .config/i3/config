@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $SCRIPT_DIR /home/Jakepys/.config/i3blocks/scriptsi3bar
+#set $SCRIPT_DIR /home/Jakepys/.config/i3blocks/scriptsi3bar
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -132,16 +132,16 @@ assign [class="firefox"] $ws1
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "0: "
+set $ws10 ""
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -216,34 +216,51 @@ for_window [class="^.*"] border pixel 3
 
 
 
-# class                 border  bground text    indicator child_border
-client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
-client.focused_inactive #8C8C8C #4C4C4C #FFFFFF #4C4C4C   #8C8C8C
-client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
-client.urgent           #EC69A0 #DB3279 #FFFFFF #DB3279   #DB3279
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+# Window borders and background colors
+client.focused          #FABD2F #3C3836 #EBDBB2 #FABD2F   #3C3836
+client.focused_inactive #7C6F64 #3C3836 #EBDBB2 #7C6F64   #3C3836
+client.unfocused        #3C3836 #282828 #928374 #3C3836   #282828
+client.urgent           #FB4934 #3C3836 #EBDBB2 #FB4934   #3C3836
+client.placeholder      #3C3836 #282828 #928374 #3C3836   #282828
 
-client.background       #FFFFFF
+client.background       #282828
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# Bar configuration
 bar {
   position top
-  status_command i3blocks
-  height 30
+  font pango:FontAwesome, Fira mono 10
+  status_command ~/.local/bin/bumblebee-status \
+    -m nic \
+    disk:root \
+    cpu \
+    memory \
+    battery \
+    date \
+    time \
+    pasink \
+    pasource \
+    brightness \
+    caffeine \
+    kernel \
+    -p root.path=/ \
+    time.format="%I:%M %p" \
+    date.format="%I:%M:%S %p" \
+    -t gruvbox-powerline
+
   colors {
-    # Fondo de la barra
-    background #2A2E3F
-    statusline #E2DFF2
-    separator #6F6A85
-    #                   borde      fondo      texto
-    focused_workspace  #3B2C4F   #3B2C4F   #A66CB2
-    active_workspace   #3B2C4F   #5A3F76   #E2DFF2
-    inactive_workspace #2A2E3F   #2A2E3F   #8888A8
-    urgent_workspace   #4A2B5F   #8C3A7B   #EAD9E1
+    # Background of the bar
+    background #282828
+    statusline #EBDBB2
+    separator #7C6F64
+
+    # Window workspace colors
+    focused_workspace  #FABD2F   #3C3836   #EBDBB2
+    active_workspace   #7C6F64   #3C3836   #EBDBB2
+    inactive_workspace #3C3836   #282828   #928374
+    urgent_workspace   #FB4934   #3C3836   #EBDBB2
   }
 }
 
-# border
-client.focused #3B2C4F #5A3F76 #A66CB2 #D3B4E1
+# Border configuration
+client.focused          #FABD2F #3C3836 #EBDBB2 #FABD2F
 
