@@ -112,13 +112,12 @@ fi
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 # PATH
-export PATH="$PATH:/home/Jakepys/.local/bin:/usr/local/go/bin:/home/Jakepys/.deno/bin"
-
+export PATH="$PATH:/home/Jakepys/.local/bin:/usr/local/go/bin:/home/Jakepys/.deno/bin:/home/Jakepys/go/bin"
 #alias k=kubectl
 #compdef __start_kubectl k
 #"/home/Jakepys/.deno/env"
 # Go Bin
-#export GOPATH=$HOME/go
+export GOPATH=$HOME/go
 
 if [ -f ~/.banner_zsh ]; then
 	source ~/.banner_zsh
@@ -148,3 +147,12 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # zig
 export PATH="$HOME/.zigchad/version/0.13.0:$PATH"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/Jakepys/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

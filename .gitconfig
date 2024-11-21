@@ -9,3 +9,4 @@
 [alias]
 	lg = log --graph --oneline --pretty=format:'%h <%an> %s %Cgreen%d'
 	cmm = commit
+	s = status --short -b
