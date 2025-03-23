@@ -76,6 +76,9 @@ bindsym $mod+c exec rofi -show run -show-icons -b
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# open JavaiDE
+bindsym $mod+z rj
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -227,40 +230,39 @@ client.background       #282828
 
 # Bar configuration
 bar {
-  position top
-  font pango:FontAwesome, Fira mono 10
-  status_command ~/.local/bin/bumblebee-status \
-    -m nic \
-    disk:root \
-    cpu \
-    memory \
-    battery \
-    date \
-    time \
-    pasink \
-    pasource \
-    brightness \
-    caffeine \
-    kernel \
-    -p root.path=/ \
-    time.format="%I:%M %p" \
-    date.format="%A, %d %B %Y" \
-    -t gruvbox-powerline
+    position top
+    font pango:FontAwesome, Fira mono 10
+    status_command ~/.local/bin/bumblebee-status \
+        -m network \
+        disk:root \
+        cpu \
+        memory \
+        battery \
+        date \
+        time \
+        pasink \
+        pasource \
+        brightness \
+        caffeine \
+        kernel \
+        -p root.path=/ \
+        time.format="%I:%M %p" \
+        date.format="%A, %d %B %Y" \
+        network.backend=iw \
+        -t gruvbox-powerline
+    colors {
+        # Background of the bar
+        background #282828
+        statusline #EBDBB2
+        separator #7C6F64
 
-  colors {
-    # Background of the bar
-    background #282828
-    statusline #EBDBB2
-    separator #7C6F64
-
-    # Window workspace colors
-    focused_workspace  #FABD2F   #3C3836   #EBDBB2
-    active_workspace   #7C6F64   #3C3836   #EBDBB2
-    inactive_workspace #3C3836   #282828   #928374
-    urgent_workspace   #FB4934   #3C3836   #EBDBB2
-  }
+        # Window workspace colors
+        focused_workspace  #FABD2F   #3C3836   #EBDBB2
+        active_workspace   #7C6F64   #3C3836   #EBDBB2
+        inactive_workspace #3C3836   #282828   #928374
+        urgent_workspace   #FB4934   #3C3836   #EBDBB2
+    }
 }
-
 # Border configuration
 client.focused          #FABD2F #3C3836 #EBDBB2 #FABD2F
 

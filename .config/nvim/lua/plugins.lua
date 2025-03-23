@@ -72,6 +72,20 @@ return {
       require('lspconfig')['ts_ls'].setup {
             capabilities = capabilities
       }
+      require('lspconfig')['harper_ls'].setup {
+            capabilities = capabilities
+      }
+      require('lspconfig')['clangd'].setup {
+            capabilities = capabilities
+      }
+        
+      require('lspconfig')['gopls'].setup {
+            capabilities = capabilities
+      }
+      require('lspconfig')['gleam'].setup {
+            capabilities = capabilities
+      }
+      
 
     end
   }

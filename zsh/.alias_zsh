@@ -9,7 +9,7 @@
 alias ls="lsd"
 alias cat="bat"
 alias ..="cd .."
-alias activepy="source $(pwd)/venv/bin/activate"
+alias activepy="source .venv/bin/activate"
 alias v="nvim"
 alias py="python3.12"
 alias c="code ."
@@ -21,3 +21,4 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias air='/home/Jakepys/go/bin/air'
 #alias treegit='git log --all --graph --decorate --oneline'
+#alias rj='~/idea-IC-243.25659.59/bin/idea'

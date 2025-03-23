@@ -22,7 +22,11 @@ return {
                     "pyright",
                     "pylsp",
                     "denols",
-                    "ts_ls"
+                    "ts_ls",
+                    "harper_ls",
+                    "clangd",
+                    "gopls",
+                    "gleam"
                 }
             })
         end

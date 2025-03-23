@@ -72,6 +72,7 @@ ZSH_THEME="simple" # set by `omz`
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    rye
     zsh-autosuggestions
     fast-syntax-highlighting
     colored-man-pages
@@ -147,7 +148,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 # zig
 export PATH="$HOME/.zigchad/version/0.13.0:$PATH"
-
+# nim
+export PATH="$HOME/.nimble/bin:$PATH"
 # >>> juliaup initialize >>>
 
 # !! Contents within this block are managed by juliaup !!
