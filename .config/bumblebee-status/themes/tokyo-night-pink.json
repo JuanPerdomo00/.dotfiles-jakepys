@@ -1,0 +1,102 @@
+{
+	"icons": [ "awesome-fonts" ],
+	"defaults": {
+		"separator-block-width": 0,
+		"warning": {
+			"fg": "#000000",
+			"bg": "#e5c07b"
+		},
+		"critical": {
+			"fg": "#000000",
+			"bg": "#ff5555"
+		}
+	},
+	"cycle": [
+		{ "fg": "#000000", "bg": "#ff79c6" },
+		{ "fg": "#000000", "bg": "#bd93f9" }
+	],
+	"dnf": {
+		"good": {
+			"fg": "#000000",
+			"bg": "#50fa7b"
+		}
+	},
+	"battery": {
+		"charged": {
+			"fg": "#000000",
+			"bg": "#50fa7b"
+		},
+		"AC": {
+			"fg": "#000000",
+			"bg": "#50fa7b"
+		}
+	},
+	"network": {
+		"good": {
+			"fg": "#000000",
+			"bg": "#2a2e3f"
+		},
+		"bad": {
+			"fg": "#000000",
+			"bg": "#ff5555"
+		}
+	},
+	"cpu": {
+		"good": {
+			"fg": "#000000",
+			"bg": "#bd93f9"
+		},
+		"warning": {
+			"fg": "#000000",
+			"bg": "#e5c07b"
+		},
+		"critical": {
+			"fg": "#000000",
+			"bg": "#ff5555"
+		}
+	},
+	"memory": {
+		"good": {
+			"fg": "#000000",
+			"bg": "#ff79c6"
+		}
+	},
+	"date": {
+		"fg": "#000000",
+		"bg": "#ffffff"
+	},
+	"time": {
+		"fg": "#000000",
+		"bg": "#ffffff"
+	},
+	"disk": {
+		"good": {
+			"fg": "#000000",
+			"bg": "#50fa7b"
+		},
+		"warning": {
+			"fg": "#000000",
+			"bg": "#e5c07b"
+		},
+		"critical": {
+			"fg": "#000000",
+			"bg": "#ff5555"
+		}
+	},
+	"kernel": {
+		"fg": "#000000",
+		"bg": "#ffffff"
+	},
+	"brightness": {
+		"fg": "#000000",
+		"bg": "#ff79c6"
+	},
+	"caffeine": {
+		"fg": "#000000",
+		"bg": "#ff79c6"
+	},
+    "uhnode": {
+        "fg": "#000000",
+        "bg": "#81cff4"
+    }
+}
