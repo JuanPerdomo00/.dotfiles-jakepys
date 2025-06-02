@@ -218,15 +218,14 @@ smart_borders on
 for_window [class="^.*"] border pixel 3
 
 
-
 # Window borders and background colors
-client.focused          #FABD2F #3C3836 #EBDBB2 #FABD2F   #3C3836
-client.focused_inactive #7C6F64 #3C3836 #EBDBB2 #7C6F64   #3C3836
-client.unfocused        #3C3836 #282828 #928374 #3C3836   #282828
-client.urgent           #FB4934 #3C3836 #EBDBB2 #FB4934   #3C3836
-client.placeholder      #3C3836 #282828 #928374 #3C3836   #282828
+client.focused          #ff79c6 #2a2e3f #cfc9c2 #ff79c6 #2a2e3f
+client.focused_inactive #bd93f9 #2a2e3f #cfc9c2 #bd93f9 #2a2e3f
+client.unfocused        #2a2e3f #1a1b26 #6e738d #2a2e3f #1a1b26
+client.urgent           #ff5555 #2a2e3f #cfc9c2 #ff5555 #2a2e3f
+client.placeholder      #2a2e3f #1a1b26 #6e738d #2a2e3f #1a1b26
 
-client.background       #282828
+client.background       #1a1b26
 
 # Bar configuration
 bar {
@@ -236,6 +235,7 @@ bar {
         -m network \
         disk:root \
         cpu \
+        uhnode \
         memory \
         battery \
         date \
@@ -249,20 +249,18 @@ bar {
         time.format="%I:%M %p" \
         date.format="%A, %d %B %Y" \
         network.backend=iw \
-        -t gruvbox-powerline
+        -t tokyo-night-pink
     colors {
-        # Background of the bar
-        background #282828
-        statusline #EBDBB2
-        separator #7C6F64
+        background #1a1b26
+        statusline #cfc9c2
+        separator #6e738d
 
-        # Window workspace colors
-        focused_workspace  #FABD2F   #3C3836   #EBDBB2
-        active_workspace   #7C6F64   #3C3836   #EBDBB2
-        inactive_workspace #3C3836   #282828   #928374
-        urgent_workspace   #FB4934   #3C3836   #EBDBB2
+        focused_workspace  #ff79c6 #2a2e3f #cfc9c2
+        active_workspace   #bd93f9 #2a2e3f #cfc9c2
+        inactive_workspace #2a2e3f #1a1b26 #6e738d
+        urgent_workspace   #ff5555 #2a2e3f #cfc9c2
     }
 }
 # Border configuration
-client.focused          #FABD2F #3C3836 #EBDBB2 #FABD2F
+client.focused          #ff79c6 #2a2e3f #cfc9c2 #ff79c6
 
