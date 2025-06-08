@@ -53,6 +53,10 @@ function ruff_fix_check() {
 
 }
 
+function view_img() {
+    kitty +kitten icat $1
+}
+
 
 function extractPorts(){
 	ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
