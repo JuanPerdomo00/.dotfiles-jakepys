@@ -1,0 +1,10 @@
+[Unit]
+Description=Lock screen when resuming from suspend (%I)
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/Jakepys/.config/i3/lockscreen.sh
+
+[Install]
+WantedBy=suspend.target
