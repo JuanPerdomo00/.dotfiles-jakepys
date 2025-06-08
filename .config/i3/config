@@ -22,7 +22,7 @@ font pango:Cantarell 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec --no-startup-id dex-autostart --autostart --environment i3
+#exec --no-startup-id dex-autostart --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -77,7 +77,7 @@ bindsym $mod+c exec rofi -show run -show-icons -b
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # open JavaiDE
-bindsym $mod+z rj
+#bindsym $mod+z rj
 
 # change focus
 bindsym $mod+j focus left
@@ -126,6 +126,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+
+# i3lock-color
+bindsym $mod+q exec ~/.config/i3/lock.sh
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -178,7 +181,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # suspend
-bindsym $mod+Shift+p exec --no-startup-id systemctl suspend && i3lock -c 181818
+bindsym $mod+Shift+b exec --no-startup-id systemctl suspend && i3lock -c 181818
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
