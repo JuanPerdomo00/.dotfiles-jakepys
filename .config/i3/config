@@ -46,7 +46,6 @@ exec_always ~/.fehbg
 exec_always --no-startup-id nitrogen --restore
 
 
-
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
@@ -77,7 +76,7 @@ bindsym $mod+c exec rofi -show run -show-icons -b
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # open JavaiDE
-#bindsym $mod+z rj
+bindsym $mod+Shift+p exec ~/pycharm-community-2025.1.1.1/bin/pycharm
 
 # change focus
 bindsym $mod+j focus left
@@ -127,8 +126,6 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 
-# i3lock-color
-bindsym $mod+q exec ~/.config/i3/lock.sh
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -161,6 +158,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -181,7 +179,6 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # suspend
-bindsym $mod+Shift+b exec --no-startup-id systemctl suspend && i3lock -c 181818
 bindsym $mod+p exec --no-startup-id ~/.config/i3/lockscreen.sh && systemctl suspend
 
 
@@ -237,7 +234,7 @@ client.background       #1a1b26
 bar {
     position top
     font pango:FontAwesome, Fira mono 10
-    status_command ~/.local/bin/bumblebee-status \
+    status_command ~/.local/bin/b-status/bumblebee-status \
         -m network \
         disk:root \
         cpu \
@@ -267,6 +264,8 @@ bar {
         urgent_workspace   #ff5555 #2a2e3f #cfc9c2
     }
 }
+
+
 # Border configuration
 client.focused          #ff79c6 #2a2e3f #cfc9c2 #ff79c6
 
